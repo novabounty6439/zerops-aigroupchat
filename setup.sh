@@ -4,8 +4,8 @@
 set -e
 
 echo "=== Step 1: 安装系统包 ==="
-apk add --no-cache bash curl wget git openvpn iptables gcompat python3 py3-pip sudo
-apk add --no-cache gcc musl-dev linux-headers make zlib-dev openssl-dev libffi-dev bzip2-dev
+sudo apk add --no-cache bash curl wget git openvpn iptables gcompat python3 py3-pip sudo
+sudo apk add --no-cache gcc musl-dev linux-headers make zlib-dev openssl-dev libffi-dev bzip2-dev
 
 echo "=== Step 2: 编译安装 Python 3.13.9 ==="
 if [ ! -f "/opt/python3.13-gnu/bin/python3.13" ]; then
