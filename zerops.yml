@@ -4,6 +4,7 @@ zerops:
       base: alpine/nodejs@26
       deployFiles:
         - setup.sh
+        - start-services.sh
     run:
       base: alpine/nodejs@26
       ports:
@@ -15,4 +16,4 @@ zerops:
           httpSupport: true
         - port: 8501
           httpSupport: true
-      start: bash /var/www/setup.sh
+      start: bash /var/www/start-services.sh
