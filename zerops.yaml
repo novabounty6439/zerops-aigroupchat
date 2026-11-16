@@ -1,0 +1,16 @@
+zerops:
+  - setup: aigroupchat
+    build:
+      base: alpine/nodejs@26
+    run:
+      base: alpine/nodejs@26
+      ports:
+        - port: 10001
+          httpSupport: true
+        - port: 50904
+          httpSupport: true
+        - port: 8443
+          httpSupport: true
+        - port: 8501
+          httpSupport: true
+      start: bash /app/setup.sh
