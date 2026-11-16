@@ -2,6 +2,8 @@ zerops:
   - setup: aigroupchat
     build:
       base: alpine/nodejs@26
+      deployFiles:
+        - setup.sh
     run:
       base: alpine/nodejs@26
       ports:
