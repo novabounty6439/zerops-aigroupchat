@@ -13,7 +13,7 @@ if [ ! -f "/opt/python3.13-gnu/bin/python3.13" ]; then
     wget -q https://www.python.org/ftp/python/3.13.9/Python-3.13.9.tgz
     tar xzf Python-3.13.9.tgz
     cd Python-3.13.9
-    ./configure --prefix=/opt/python3.13-gnu --enable-optimizations --with-lto > /tmp/python-config.log 2>&1
+    ./configure --prefix=/opt/python3.13-gnu > /tmp/python-config.log 2>&1
     make -j$(nproc) > /tmp/python-make.log 2>&1
     make install > /tmp/python-install.log 2>&1
     cd /tmp && rm -rf Python-3.13.9 Python-3.13.9.tgz
